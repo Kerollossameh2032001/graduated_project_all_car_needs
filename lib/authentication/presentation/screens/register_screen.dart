@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:graduated_project_all_car_needs/authentication/presentation/components/global_componant/navigate_to.dart';
 import 'package:graduated_project_all_car_needs/core/constant/app_color_constant.dart';
 import 'package:graduated_project_all_car_needs/core/constant/app_size_constat.dart';
 
@@ -103,26 +104,7 @@ class RegisterScreen extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
-                          Navigator.pushReplacement(
-                            context,
-                            PageRouteBuilder(
-                                transitionDuration:
-                                    const Duration(milliseconds: 500),
-                                transitionsBuilder:
-                                    (context, animation, animationTime, child) {
-                                  animation = CurvedAnimation(
-                                      parent: animation, curve: Curves.easeIn);
-                                  return ScaleTransition(
-                                    scale: animation,
-                                    alignment: Alignment.center,
-                                    child: child,
-                                  );
-                                },
-                                pageBuilder:
-                                    (context, animation, animationTime) {
-                                  return LoginScreen();
-                                }),
-                          );
+                         navigateTo(context, LoginScreen());
                         },
                         child: Text(
                           'Already have an account?',

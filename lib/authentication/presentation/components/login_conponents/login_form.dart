@@ -48,30 +48,11 @@ class LoginForm extends StatelessWidget {
                 ),
                 TextFormField(
                   cursorColor: AppColorConstant.signInColor,
-                  decoration: InputDecoration(
-                    contentPadding: const EdgeInsets.symmetric(vertical: 10),
-                    prefixIcon: const Icon(
+                  decoration: const InputDecoration(
+                    prefixIcon: Icon(
                       Icons.phone,
                       color: Colors.grey,
                     ),
-                    filled: true,
-                    fillColor: Colors.white,
-                    border: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: AppColorConstant.signInColor),
-                      borderRadius:
-                          BorderRadius.circular(AppSizeConstant.borderRadius),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.circular(AppSizeConstant.borderRadius),
-                        borderSide:
-                            BorderSide(color: AppColorConstant.signInColor)),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.circular(AppSizeConstant.borderRadius),
-                        borderSide:
-                            BorderSide(color: AppColorConstant.signInColor)),
                   ),
                   style: Theme.of(context)
                       .textTheme
@@ -94,13 +75,10 @@ class LoginForm extends StatelessWidget {
                 TextFormField(
                   cursorColor: AppColorConstant.signInColor,
                   decoration: InputDecoration(
-                    contentPadding: const EdgeInsets.symmetric(vertical: 10),
                     prefixIcon: const Icon(
                       Icons.password,
                       color: Colors.grey,
                     ),
-                    filled: true,
-                    fillColor: Colors.white,
                     suffixIcon: IconButton(
                         onPressed: () {
                           cubit.changeVisibility();
@@ -109,22 +87,6 @@ class LoginForm extends StatelessWidget {
                           cubit.visibility,
                           color: Colors.grey,
                         )),
-                    border: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: AppColorConstant.signInColor),
-                      borderRadius:
-                          BorderRadius.circular(AppSizeConstant.borderRadius),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.circular(AppSizeConstant.borderRadius),
-                        borderSide:
-                            BorderSide(color: AppColorConstant.signInColor)),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.circular(AppSizeConstant.borderRadius),
-                        borderSide:
-                            BorderSide(color: AppColorConstant.signInColor)),
                   ),
                   style: Theme.of(context)
                       .textTheme

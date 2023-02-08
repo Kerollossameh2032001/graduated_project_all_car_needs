@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:graduated_project_all_car_needs/core/constant/app_color_constant.dart';
 import 'package:graduated_project_all_car_needs/core/constant/app_size_constat.dart';
 import 'package:graduated_project_all_car_needs/core/constant/app_string_constants.dart';
 
 ThemeData getLightThemeData = ThemeData(
+  scaffoldBackgroundColor: Colors.grey[400],
   primaryColor: Colors.grey,
   textTheme: const TextTheme(
     titleMedium: TextStyle(
@@ -24,4 +26,31 @@ ThemeData getLightThemeData = ThemeData(
         fontSize: AppSizeConstant.bodySmallSize,
         fontWeight: FontWeight.bold),
   ),
+  // appBarTheme: AppBarTheme(
+  //   backgroundColor: Colors.grey[400],
+  //   systemOverlayStyle: SystemUiOverlayStyle(
+  //     statusBarColor: Colors.grey[400],
+  //   )
+  // ),
+  inputDecorationTheme: InputDecorationTheme(
+    contentPadding: const EdgeInsets.symmetric(vertical: 10),
+    filled: true,
+    fillColor: Colors.white,
+    border: OutlineInputBorder(
+      borderSide:
+      BorderSide(color: AppColorConstant.signInColor),
+      borderRadius:
+      BorderRadius.circular(AppSizeConstant.borderRadius),
+    ),
+    enabledBorder: OutlineInputBorder(
+        borderRadius:
+        BorderRadius.circular(AppSizeConstant.borderRadius),
+        borderSide:
+        BorderSide(color: AppColorConstant.signInColor)),
+    focusedBorder: OutlineInputBorder(
+        borderRadius:
+        BorderRadius.circular(AppSizeConstant.borderRadius),
+        borderSide:
+        BorderSide(color: AppColorConstant.signInColor)),
+  )
 );

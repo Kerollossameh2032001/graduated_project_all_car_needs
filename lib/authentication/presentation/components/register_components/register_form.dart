@@ -51,30 +51,11 @@ class RegisterForm extends StatelessWidget {
                 ),
                 TextFormField(
                   cursorColor: AppColorConstant.signInColor,
-                  decoration: InputDecoration(
-                    prefixIcon: const Icon(
+                  decoration: const InputDecoration(
+                    prefixIcon: Icon(
                       Icons.person,
                       color: Colors.grey,
                     ),
-                    contentPadding: const EdgeInsets.symmetric(vertical: 10),
-                    filled: true,
-                    fillColor: Colors.white,
-                    border: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: AppColorConstant.signInColor),
-                      borderRadius:
-                          BorderRadius.circular(AppSizeConstant.borderRadius),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.circular(AppSizeConstant.borderRadius),
-                        borderSide:
-                            BorderSide(color: AppColorConstant.signInColor)),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.circular(AppSizeConstant.borderRadius),
-                        borderSide:
-                            BorderSide(color: AppColorConstant.signInColor)),
                   ),
                   style: Theme.of(context)
                       .textTheme
@@ -90,7 +71,7 @@ class RegisterForm extends StatelessWidget {
                   },
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.001,
+                  height: MediaQuery.of(context).size.height * 0.001
                 ),
                 Text(
                   'Phone',
@@ -98,30 +79,11 @@ class RegisterForm extends StatelessWidget {
                 ),
                 TextFormField(
                   cursorColor: AppColorConstant.signInColor,
-                  decoration: InputDecoration(
-                    prefixIcon: const Icon(
+                  decoration: const InputDecoration(
+                    prefixIcon: Icon(
                       Icons.phone,
                       color: Colors.grey,
                     ),
-                    contentPadding: const EdgeInsets.symmetric(vertical: 10),
-                    filled: true,
-                    fillColor: Colors.white,
-                    border: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: AppColorConstant.signInColor),
-                      borderRadius:
-                          BorderRadius.circular(AppSizeConstant.borderRadius),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.circular(AppSizeConstant.borderRadius),
-                        borderSide:
-                            BorderSide(color: AppColorConstant.signInColor)),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.circular(AppSizeConstant.borderRadius),
-                        borderSide:
-                            BorderSide(color: AppColorConstant.signInColor)),
                   ),
                   style: Theme.of(context)
                       .textTheme
@@ -137,11 +99,11 @@ class RegisterForm extends StatelessWidget {
                   },
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.001,
+                  height: MediaQuery.of(context).size.height * 0.001
                 ),
                 Text(
                   'Password',
-                  style: Theme.of(context).textTheme.bodyMedium,
+                  style: Theme.of(context).textTheme.bodyMedium
                 ),
                 TextFormField(
                   cursorColor: AppColorConstant.signInColor,
@@ -150,9 +112,6 @@ class RegisterForm extends StatelessWidget {
                       Icons.password,
                       color: Colors.grey,
                     ),
-                    contentPadding: const EdgeInsets.symmetric(vertical: 10),
-                    filled: true,
-                    fillColor: Colors.white,
                     suffixIcon: IconButton(
                         onPressed: () {
                           cubit.changeVisibility();
@@ -161,22 +120,6 @@ class RegisterForm extends StatelessWidget {
                           cubit.visibility,
                           color: Colors.grey,
                         )),
-                    border: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: AppColorConstant.signInColor),
-                      borderRadius:
-                          BorderRadius.circular(AppSizeConstant.borderRadius),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.circular(AppSizeConstant.borderRadius),
-                        borderSide:
-                            BorderSide(color: AppColorConstant.signInColor)),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.circular(AppSizeConstant.borderRadius),
-                        borderSide:
-                            BorderSide(color: AppColorConstant.signInColor)),
                   ),
                   style: Theme.of(context)
                       .textTheme
@@ -193,11 +136,11 @@ class RegisterForm extends StatelessWidget {
                   },
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.001,
+                  height: MediaQuery.of(context).size.height * 0.001
                 ),
                 Text(
                   'Confirm password',
-                  style: Theme.of(context).textTheme.bodyMedium,
+                  style: Theme.of(context).textTheme.bodyMedium
                 ),
                 TextFormField(
                   cursorColor: AppColorConstant.signInColor,
@@ -206,9 +149,6 @@ class RegisterForm extends StatelessWidget {
                       Icons.password,
                       color: Colors.grey,
                     ),
-                    contentPadding: const EdgeInsets.symmetric(vertical: 10),
-                    filled: true,
-                    fillColor: Colors.white,
                     suffixIcon: IconButton(
                         onPressed: () {
                           cubit.changeConfirmVisibility();
@@ -217,22 +157,6 @@ class RegisterForm extends StatelessWidget {
                          cubit.confirmVisibility,
                           color: Colors.grey,
                         )),
-                    border: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(color: AppColorConstant.signInColor),
-                      borderRadius:
-                          BorderRadius.circular(AppSizeConstant.borderRadius),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.circular(AppSizeConstant.borderRadius),
-                        borderSide:
-                            BorderSide(color: AppColorConstant.signInColor)),
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius:
-                            BorderRadius.circular(AppSizeConstant.borderRadius),
-                        borderSide:
-                            BorderSide(color: AppColorConstant.signInColor)),
                   ),
                   style: Theme.of(context)
                       .textTheme
