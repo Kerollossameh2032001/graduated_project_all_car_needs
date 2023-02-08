@@ -5,6 +5,8 @@ import 'package:graduated_project_all_car_needs/core/constant/app_string_constan
 import 'package:graduated_project_all_car_needs/core/global/theme/light_theme.dart';
 import 'package:graduated_project_all_car_needs/core/services/service_locator.dart';
 import 'package:graduated_project_all_car_needs/layout/presentation/screen/home_screen.dart';
+import 'package:graduated_project_all_car_needs/layout/presentation/screen/layout_screen.dart';
+import 'package:graduated_project_all_car_needs/layout/presentation/screen/setting_screen.dart';
 
 import 'authentication/presentation/screens/create_new_password_screen.dart';
 import 'core/services/bloc_observer.dart';
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
       title: AppStringConstant.appName,
       theme: getLightThemeData,
       debugShowCheckedModeBanner: false,
-      home: HomeScreen()//const SplashScreen(),
+      home: LayoutScreen(),
     );
   }
 }
