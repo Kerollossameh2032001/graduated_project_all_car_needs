@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:graduated_project_all_car_needs/authentication/presentation/components/global_componant/navigate_to.dart';
+import 'package:graduated_project_all_car_needs/core/global/widgets/navigate_to.dart';
 import 'package:graduated_project_all_car_needs/layout/presentation/screen/profile_screen.dart';
 import '../components/setting_componetnts/setting_header.dart';
 import '../components/setting_componetnts/setting_list_tile_item.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:graduated_project_all_car_needs/authentication/presentation/components/forgot_password_componants/confirm_button.dart';
-import 'package:graduated_project_all_car_needs/authentication/presentation/components/global_componant/navigate_to.dart';
+import 'package:graduated_project_all_car_needs/core/global/widgets/navigate_to.dart';
 import 'package:graduated_project_all_car_needs/authentication/presentation/screens/create_new_password_screen.dart';
 import 'package:graduated_project_all_car_needs/core/constant/app_color_constant.dart';
 import 'package:graduated_project_all_car_needs/core/constant/app_color_constant.dart';

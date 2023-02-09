@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constant/app_size_constat.dart';
 import '../../screens/input_code_screen.dart';
-import '../global_componant/navigate_to.dart';
+import '../../../../core/global/widgets/navigate_to.dart';
 
 class ConfirmButton extends StatelessWidget {
   final void Function()?onPressed;

@@ -6,7 +6,10 @@ import 'package:graduated_project_all_car_needs/core/global/base_usecase/base_us
 
 import '../../../core/exceptions/failure.dart';
 
+
+
 class LoginUseCase extends BaseUseCase<AuthEntity, LoginParameter> {
+
   final BaseAuthRepository baseAuthRepository;
 
   LoginUseCase(this.baseAuthRepository);

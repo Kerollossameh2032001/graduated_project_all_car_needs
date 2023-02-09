@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:graduated_project_all_car_needs/core/global/widgets/navigate_to.dart';
 import 'package:graduated_project_all_car_needs/authentication/presentation/controller/login_cubit/login_cubit.dart';
 import 'package:graduated_project_all_car_needs/core/constant/app_size_constat.dart';
+import 'package:graduated_project_all_car_needs/core/services/cache_helper.dart';
+import 'package:graduated_project_all_car_needs/layout/presentation/screen/layout_screen.dart';
 import '../../../core/global/widgets/show_flutter_toast.dart';
 import '../../../core/services/service_locator.dart';
 import '../components/login_conponents/login_form.dart';
@@ -9,7 +12,7 @@ import '../components/login_conponents/navigate_to_register_button.dart';
 import '../controller/login_cubit/login_states.dart';
 
 class LoginScreen extends StatelessWidget {
-   LoginScreen({Key? key}) : super(key: key);
+  LoginScreen({Key? key}) : super(key: key);
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
@@ -78,10 +81,10 @@ class LoginScreen extends StatelessWidget {
                                 .textTheme
                                 .bodyMedium!
                                 .copyWith(
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .titleMedium!
-                                    .color),
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .titleMedium!
+                                        .color),
                           ),
                         ),
                       ),
@@ -96,6 +99,7 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
+
   void loginCheckStates(LoginStates state, BuildContext context) {
     if (state is LoginLoadingState) {
       showDialog(
@@ -111,12 +115,18 @@ class LoginScreen extends StatelessWidget {
       showFlutterToast(message: state.errorMessage, state: ToastState.error);
       Navigator.of(context).pop();
     } else if (state is LoginSuccessState) {
-      showFlutterToast(
-          message: "Welcome ${state.userData.data.name}",
-          state: ToastState.success);
-      Navigator.pop(context);
-
+      CacheHelper.saveData(key: 'token', value: state.userData.accessToken)
+          .then((value) {
+        showFlutterToast(
+            message: "Welcome ${state.userData.data.name}",
+            state: ToastState.success);
+        Navigator.pop(context);
+        navigateTo(context, LayoutScreen(token: state.userData.accessToken));
+      }).catchError((e) {
+        showFlutterToast(
+            message: "Error while setting token", state: ToastState.error);
+        Navigator.of(context).pop();
+      });
     }
   }
 }
-

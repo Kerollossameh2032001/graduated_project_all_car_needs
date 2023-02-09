@@ -4,7 +4,7 @@ import 'package:graduated_project_all_car_needs/core/constant/app_size_constat.d
 import 'package:hexcolor/hexcolor.dart';
 
 import '../components/forgot_password_componants/confirm_button.dart';
-import '../components/global_componant/navigate_to.dart';
+import '../../../core/global/widgets/navigate_to.dart';
 import 'input_code_screen.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
